@@ -2,26 +2,21 @@
 """fo"o
 #bar
 baz"""
-"""foo "bar" baz
-another"""
 '''foobar'''
 '''fo'o
 #bar
 baz'''
-"""""" """foo"""
+"""""" """<- empty triple-quoted string"""
 
 ----------------------------------------------------
 
 [
 	["triple-quoted-string", "\"\"\"foobar\"\"\""],
 	["triple-quoted-string", "\"\"\"fo\"o\r\n#bar\r\nbaz\"\"\""],
-	["triple-quoted-string", "\"\"\"foo \"bar\" baz\r\nanother\"\"\""],
 	["triple-quoted-string", "'''foobar'''"],
 	["triple-quoted-string", "'''fo'o\r\n#bar\r\nbaz'''"],
-	["triple-quoted-string", "\"\"\"\"\"\" \"\"\""],
-	"foo",
-	["string", "\"\""],
-	"\""
+	["triple-quoted-string", "\"\"\"\"\"\""],
+	["triple-quoted-string", "\"\"\"<- empty triple-quoted string\"\"\""]
 ]
 
 ----------------------------------------------------
