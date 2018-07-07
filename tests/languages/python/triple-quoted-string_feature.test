@@ -6,7 +6,14 @@ baz"""
 '''fo'o
 #bar
 baz'''
-"""""" """<- empty triple-quoted string"""
+
+Python supports empty triple quoted strings
+"""""" """foo"""
+
+An intricate former failure mode
+"#" """worked
+""" """broke
+"""
 
 ----------------------------------------------------
 
@@ -15,8 +22,28 @@ baz'''
 	["triple-quoted-string", "\"\"\"fo\"o\r\n#bar\r\nbaz\"\"\""],
 	["triple-quoted-string", "'''foobar'''"],
 	["triple-quoted-string", "'''fo'o\r\n#bar\r\nbaz'''"],
+	"\r\n\r\nPython supports empty triple quoted strings\r\n",
 	["triple-quoted-string", "\"\"\"\"\"\""],
-	["triple-quoted-string", "\"\"\"<- empty triple-quoted string\"\"\""]
+	["triple-quoted-string", "\"\"\"foo\"\"\""],
+	"\r\n\r\nAn intricate former failure mode\r\n",
+	[
+	  "string",
+	  "\"#\""
+	],
+	[
+	  "triple-quoted-string",
+	  "\"\"\"worked\r\n\"\"\""
+	],
+	[
+	  "string",
+	  "\"\""
+	],
+	"\"broke\r\n",
+	[
+	  "string",
+	  "\"\""
+	],
+	"\""
 ]
 
 ----------------------------------------------------
